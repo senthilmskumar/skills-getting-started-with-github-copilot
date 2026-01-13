@@ -101,8 +101,8 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
   max-height: 120px;
   overflow: auto;
@@ -110,9 +110,33 @@ section h3 {
 
 .participants-list li {
   font-size: 0.95rem;
-  padding: 4px 0;
+  padding: 6px 8px;
   color: #333;
   word-break: break-all;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.12s ease;
+  line-height: 1;
+}
+
+.remove-participant:hover {
+  background-color: rgba(198,40,40,0.08);
 }
 
 .participants-list .muted {
